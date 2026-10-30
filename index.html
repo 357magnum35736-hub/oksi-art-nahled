@@ -1,0 +1,1218 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="img/logo-kulate.webp">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}</style>
+<title>Oksi Art</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Zefírové květiny, marshmallow postavičky a zářivé obrazy z kamínků Preciosa. Ruční tvorba Oksany z Liberce.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Jost:wght@300..600&family=Pinyon+Script&display=swap">
+<script>document.documentElement.lang = 'cs'</script>
+<style>
+/* Šperkovnice: tmavý samet, zlato a sklo. Každý výrobek je zasazený jako šperk do zlaté obruby pod sklem a kurzor je světlo, které po nich klouže. */
+:root {
+  color-scheme: dark;
+  --void: #0b0608;
+  --velvet: #170c12;
+  --plum: #2a1420;
+  --ivory: #f8f0e4;
+  --mist: #c9bbad;
+  --gold-hi: #fff3c9;
+  --gold: #e3b557;
+  --gold-lo: #8a6220;
+  --rose: #c4466f;
+  --line: rgba(255, 232, 176, .16);
+  --ink: #241505;
+  --display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --body: "Jost", "Segoe UI", system-ui, sans-serif;
+  --script: "Pinyon Script", "Snell Roundhand", cursive;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --foil: linear-gradient(105deg, #8a6220 0%, #f6dd9a 14%, #c28f33 28%, #fff6d4 42%, #d6a548 54%, #8f6622 66%, #f9e7b0 80%, #b98a31 92%, #8a6220 100%);
+  --bezel: conic-gradient(from var(--a, 40deg), #7b5618, #f9e7b0 8%, #c7923a 18%, #6e4c14 30%, #f2d48a 42%, #fff6d0 48%, #a8792a 60%, #5f4110 72%, #f7e3a6 84%, #b8862d 92%, #7b5618);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--void); color: var(--ivory); font: 400 17px/1.65 var(--body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+p { margin: 0; }
+:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 3px; }
+
+.ambient { position: fixed; inset: 0; z-index: 0; pointer-events: none; background:
+  radial-gradient(58vw 48vw at 82% 6%, rgba(196, 70, 111, .24), transparent 62%),
+  radial-gradient(46vw 40vw at 6% 34%, rgba(227, 181, 87, .10), transparent 62%); }
+main, footer { position: relative; z-index: 1; }
+
+/* Pruhy přes celou šířku a vnitřní obsah */
+.band { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); position: relative; overflow-x: clip; }
+.inner { max-width: 1280px; margin-inline: auto; padding-inline: clamp(4px, 3vw, 40px); }
+section { scroll-margin-top: 84px; }
+.room { padding-block: clamp(72px, 10vw, 150px); }
+
+/* Typografie */
+.eyebrow { font-size: 13px; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 14px; }
+.eyebrow::before { content: ""; width: 38px; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); }
+h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; text-wrap: balance; }
+.h-xl { font-size: clamp(58px, 9.2vw, 132px); line-height: .96; letter-spacing: -.022em; }
+.h-xl .line { display: block; white-space: nowrap; }
+.h-lg { font-size: clamp(38px, 4.8vw, 74px); line-height: 1.04; letter-spacing: -.016em; }
+.h-lg .line { display: block; }
+.h-md { font-size: clamp(30px, 3.4vw, 50px); line-height: 1.08; letter-spacing: -.012em; }
+em { font-style: italic; }
+.foil { display: inline-block; padding: .06em .08em .16em; margin: -.06em -.08em -.16em; background: var(--foil); background-size: 320% 100%; background-position: var(--sheen, 30%) 0; -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 22px rgba(227, 181, 87, .2)); }
+.lede { font-size: clamp(18px, 1.5vw, 21px); line-height: 1.6; color: var(--mist); max-width: 34em; }
+.copy { display: grid; gap: 16px; color: var(--mist); max-width: 36em; }
+.note { font-size: 15px; color: var(--mist); }
+
+/* Sklo */
+.glass { position: relative; isolation: isolate; border-radius: 22px;
+  background: linear-gradient(140deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, .025) 46%, rgba(255, 225, 170, .055));
+  -webkit-backdrop-filter: blur(18px) saturate(150%); backdrop-filter: blur(18px) saturate(150%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .3), inset 0 0 0 1px rgba(255, 240, 205, .1), inset 0 -1px 0 rgba(0, 0, 0, .35), 0 24px 60px -24px rgba(0, 0, 0, .85); }
+.glass::after { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
+  background: radial-gradient(280px circle at var(--mx, 25%) var(--my, 0%), rgba(255, 244, 214, .17), transparent 68%); }
+
+/* Tlačítka */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 12px 28px; border: 0; border-radius: 999px; font-size: 16px; font-weight: 500; letter-spacing: .01em; text-decoration: none; cursor: pointer; transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(1px) scale(.985); }
+.btn-gold { color: var(--ink); background: var(--foil); background-size: 320% 100%; background-position: var(--sheen, 30%) 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75), inset 0 -2px 3px rgba(90, 55, 10, .45), 0 12px 34px -10px rgba(227, 181, 87, .6); }
+.btn-gold:hover { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .85), inset 0 -2px 3px rgba(90, 55, 10, .45), 0 18px 46px -10px rgba(227, 181, 87, .85); }
+.btn-glass { color: var(--ivory); border-radius: 999px; }
+
+/* Navigace */
+.nav { position: fixed; z-index: 50; top: calc(12px + env(safe-area-inset-top, 0px)); left: 50%; transform: translateX(-50%); width: min(1240px, calc(100% - 24px)); display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 8px 8px 8px 22px; border-radius: 999px; }
+.brand { font-family: var(--display); font-size: 25px; font-style: italic; text-decoration: none; line-height: 1; white-space: nowrap; }
+.nav ul { display: flex; gap: clamp(14px, 2.2vw, 32px); margin: 0; padding: 0; list-style: none; }
+.nav li a { position: relative; display: block; padding: 8px 2px; font-size: 15px; text-decoration: none; color: var(--mist); transition: color .3s; }
+.nav li a:hover, .nav li a.on { color: var(--ivory); }
+.nav li a::after { content: ""; position: absolute; left: 50%; bottom: 0; width: 5px; height: 5px; margin-left: -2.5px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 10px var(--gold); opacity: 0; transform: scale(0); transition: .4s var(--ease); }
+.nav li a.on::after { opacity: 1; transform: scale(1); }
+.nav .btn { min-height: 42px; padding: 8px 22px; font-size: 15px; }
+.dock { display: none; }
+
+/* Úvod */
+.hero { padding-top: calc(86px + env(safe-area-inset-top, 0px)); padding-bottom: clamp(36px, 5vw, 64px); }
+.hero__grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: clamp(16px, 3vw, 48px); align-items: center; min-height: clamp(540px, 74vh, 760px); }
+.hero__text { display: grid; gap: clamp(20px, 2.4vw, 32px); position: relative; z-index: 2; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero__obj { position: relative; min-width: 0; }
+.stage { position: relative; aspect-ratio: 5 / 6; max-height: min(78vh, 720px); margin-inline: auto; cursor: pointer; }
+.stage__still { position: absolute; left: 50%; top: 44%; width: 58%; transform: translate(-50%, -50%); filter: drop-shadow(0 30px 50px rgba(0, 0, 0, .7)); transition: opacity .8s; }
+.stage canvas { position: absolute; inset: -5% -14% -3%; width: 128%; height: 108%; opacity: 0; transition: opacity 1s; }
+.stage.live canvas { opacity: 1; }
+.stage.live .stage__still { opacity: 0; }
+.chip { position: absolute; z-index: 3; padding: 11px 16px 12px; max-width: 230px; border-radius: 16px; font-size: 15px; line-height: 1.32; animation: drift 8s ease-in-out infinite alternate; }
+.chip small { display: block; margin-bottom: 3px; font-size: 11px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
+.chip--a { left: -11%; top: 5%; max-width: 210px; }
+.chip--b { right: -7%; top: 11%; max-width: 190px; animation-delay: -3s; }
+.chip--c { left: -13%; bottom: 10%; max-width: 190px; animation-delay: -5s; }
+.lift { position: absolute; z-index: 3; left: 50%; bottom: 0; translate: -50% 0; min-height: 44px; padding: 8px 20px; border: 0; font-size: 15px; cursor: pointer; }
+.doors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: clamp(28px, 4vw, 52px); }
+.door { display: flex; align-items: center; gap: 16px; padding: 14px 18px 14px 14px; border-radius: 999px; text-decoration: none; transition: transform .45s var(--ease); }
+.door:hover { transform: translateY(-4px); }
+.door .medal { flex: 0 0 74px; width: 74px; pointer-events: none; }
+.door b { display: block; font-family: var(--display); font-size: 22px; font-weight: 400; line-height: 1.1; }
+.door div span { display: block; font-size: 14.5px; line-height: 1.35; color: var(--mist); margin-top: 3px; }
+
+/* Velká věta v pohybu */
+.statement { overflow: hidden; padding-block: clamp(24px, 4vw, 56px); border-block: 1px solid var(--line); background: linear-gradient(90deg, transparent, rgba(227, 181, 87, .05), transparent); }
+.statement p { display: inline-block; white-space: nowrap; font-family: var(--display); font-style: italic; font-size: clamp(52px, 11vw, 170px); line-height: 1.12; will-change: transform; }
+
+/* Šperk ve zlaté obrubě pod sklem */
+.medal { position: relative; display: block; width: 100%; aspect-ratio: 1; padding: 0; border: 0; border-radius: 50%; background: var(--bezel); cursor: zoom-in;
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(var(--lift, 0)); transition: transform .5s var(--ease), box-shadow .5s var(--ease);
+  box-shadow: 0 34px 64px -22px rgba(0, 0, 0, .9), 0 0 44px -14px rgba(227, 181, 87, .28), inset 0 0 0 1px rgba(255, 244, 205, .55); }
+.medal:hover { --lift: -8px; box-shadow: 0 44px 74px -22px rgba(0, 0, 0, .95), 0 0 70px -10px rgba(227, 181, 87, .5), inset 0 0 0 1px rgba(255, 244, 205, .7); }
+.medal::before { content: ""; position: absolute; inset: 3.2%; border-radius: 50%; border: 2px dotted rgba(255, 246, 214, .72); z-index: 1; }
+.medal img { position: absolute; inset: 5.6%; width: 88.8%; height: 88.8%; border-radius: 50%; object-fit: cover; }
+.medal.cut img { padding: 5%; object-fit: contain; background: radial-gradient(circle at 50% 42%, var(--plum), var(--velvet) 60%, var(--void) 100%); }
+.medal::after { content: ""; position: absolute; inset: 5.6%; border-radius: 50%; pointer-events: none;
+  background:
+    radial-gradient(50% 26% at calc(34% + var(--dx, 0%)) calc(15% + var(--dy, 0%)), rgba(255, 255, 255, .30), rgba(255, 255, 255, .05) 62%, transparent 74%),
+    radial-gradient(38% 12% at calc(62% - var(--dx, 0%)) calc(90% - var(--dy, 0%)), rgba(255, 255, 255, .14), transparent 72%),
+    radial-gradient(closest-side, transparent 74%, rgba(10, 4, 6, .5) 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .24), inset 0 3px 8px rgba(0, 0, 0, .55); }
+.slot { margin: 0; animation: drift 10s ease-in-out infinite alternate; animation-delay: var(--dl, 0s); }
+.slot figcaption { margin-top: 14px; text-align: center; font-size: 15px; color: var(--mist); }
+
+/* Zaphiry */
+.zaph { background: radial-gradient(70vw 50vw at 90% 22%, rgba(196, 70, 111, .13), transparent 62%); }
+.zaph__top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: center; margin-top: clamp(30px, 4vw, 56px); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.chips li { padding: 7px 15px; border-radius: 999px; border: 1px solid var(--line); font-size: 15px; color: var(--ivory); background: rgba(255, 236, 190, .05); }
+.stack { display: grid; gap: 26px; justify-items: start; }
+.loupe-wrap { display: grid; gap: 14px; }
+.lstage { position: relative; aspect-ratio: var(--ar, 1); border-radius: 26px; overflow: hidden; cursor: none; touch-action: pan-y; background: radial-gradient(circle at 50% 45%, var(--plum), var(--velvet) 62%, var(--void) 100%);
+  box-shadow: 0 0 0 1px rgba(255, 240, 200, .35), 0 0 0 7px rgba(255, 244, 214, .035), 0 50px 100px -40px #000; }
+.lstage > img { width: 100%; height: 100%; object-fit: contain; user-select: none; -webkit-user-drag: none; }
+.lens { position: absolute; left: 0; top: 0; width: clamp(150px, 21vw, 270px); aspect-ratio: 1; border-radius: 50%; padding: 7px; background: var(--bezel); pointer-events: none; will-change: transform;
+  box-shadow: 0 24px 50px -8px rgba(0, 0, 0, .85), inset 0 0 0 1px rgba(255, 246, 214, .75); }
+.lens::before { content: ""; position: absolute; left: 86%; top: 86%; width: 62px; height: 13px; border-radius: 7px; transform: rotate(45deg); transform-origin: 0 50%; background: var(--foil); background-size: 300% 100%; box-shadow: 0 8px 14px rgba(0, 0, 0, .6), inset 0 1px 0 rgba(255, 255, 255, .7); }
+.lens__in { position: relative; width: 100%; height: 100%; border-radius: 50%; background-color: var(--velvet); background-repeat: no-repeat; box-shadow: inset 0 0 26px rgba(0, 0, 0, .55), inset 0 0 0 1px rgba(255, 255, 255, .35); overflow: hidden; }
+.lens__in::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(52% 26% at 34% 14%, rgba(255, 255, 255, .42), rgba(255, 255, 255, .06) 60%, transparent 74%), radial-gradient(36% 12% at 64% 90%, rgba(255, 255, 255, .2), transparent 72%); }
+.switch { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.switch button { display: flex; align-items: center; gap: 8px; min-height: 42px; padding: 4px 16px 4px 4px; border-radius: 999px; border: 1px solid var(--line); background: transparent; cursor: pointer; font-size: 15px; color: var(--mist); transition: .3s; }
+.switch button img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
+.switch button[aria-pressed="true"] { color: var(--ivory); border-color: var(--gold); background: rgba(227, 181, 87, .1); }
+.vitrina-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 32px; margin-top: clamp(64px, 9vw, 130px); }
+.tray-m { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(14px, 2.4vw, 36px); margin-top: clamp(28px, 4vw, 54px); }
+.tray-m .s1 { grid-column: 1 / span 5; }
+.tray-m .s2 { grid-column: 6 / span 4; margin-top: 12%; }
+.tray-m .s3 { grid-column: 10 / span 3; margin-top: 3%; }
+.tray-m .s4 { grid-column: 1 / span 4; margin-top: -4%; }
+.tray-m .s5 { grid-column: 5 / span 5; margin-top: 3%; }
+.tray-m .s6 { grid-column: 10 / span 3; margin-top: -16%; }
+.gift { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, .55fr); gap: clamp(24px, 4vw, 56px); align-items: center; margin-top: clamp(56px, 8vw, 110px); }
+.gift__photo { width: min(100%, 240px); justify-self: center; border-radius: 16px; box-shadow: 0 0 0 1px rgba(255, 240, 200, .35), 0 34px 60px -24px #000; }
+.gift__img { width: min(100%, 460px); justify-self: center; filter: drop-shadow(0 34px 44px rgba(0, 0, 0, .65)); animation: drift 8s ease-in-out infinite alternate; }
+
+/* Marshmallow */
+.marsh { background: linear-gradient(180deg, transparent, rgba(92, 34, 64, .36) 18%, rgba(92, 34, 64, .36) 82%, transparent); }
+.marsh__head { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, .6fr); gap: 24px; align-items: center; }
+.angel { width: min(100%, 400px); justify-self: end; filter: drop-shadow(0 30px 40px rgba(0, 0, 0, .6)); animation: drift 7s ease-in-out infinite alternate; }
+.jar { position: relative; margin-top: clamp(28px, 4vw, 48px); padding: 0; overflow: hidden; border-radius: 30px; background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 220, 235, .10)); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4), inset 0 0 0 1px rgba(255, 240, 225, .22), inset 0 -3px 0 rgba(227, 181, 87, .75), inset 0 -36px 60px -36px rgba(227, 181, 87, .35), 0 50px 90px -46px #000; }
+.jar__floor { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding: 20px; }
+.jar.live .jar__floor { position: relative; display: block; padding: 0; height: clamp(420px, 44vw, 560px); }
+.tok { position: relative; flex: none; width: calc(var(--r, 56px) * 2); height: calc(var(--r, 56px) * 2); padding: 0; border: 0; border-radius: 50%; background: none; cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.jar.live .tok { position: absolute; left: 0; top: 0; will-change: transform; }
+.tok.held { cursor: grabbing; z-index: 5; }
+.tok img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; -webkit-user-drag: none; filter: drop-shadow(0 10px 9px rgba(30, 8, 20, .5)); }
+.jar__ui { position: absolute; z-index: 6; left: 16px; right: 16px; top: 14px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; pointer-events: none; }
+.jar__ui > * { pointer-events: auto; }
+.jar__hint { font-size: 15px; color: var(--ivory); }
+.jar__name { display: inline-block; min-width: 1px; margin-left: 8px; font-family: var(--display); font-style: italic; font-size: 19px; color: var(--gold-hi); }
+.jar__shake { min-height: 42px; padding: 6px 18px; border: 0; font-size: 15px; cursor: pointer; }
+.tip { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(18px, 3vw, 40px); margin-top: clamp(22px, 3vw, 36px); }
+.tip p + p { color: var(--mist); }
+.tip b { color: var(--gold-hi); font-weight: 500; }
+.plates { --n: 7; --g: clamp(12px, 2vw, 26px); display: flex; flex-wrap: wrap; justify-content: center; gap: var(--g); margin-top: clamp(40px, 5vw, 64px); }
+.plates .slot { flex: 0 0 calc((100% - (var(--n) - 1) * var(--g)) / var(--n)); min-width: 0; }
+.plates .slot figcaption { font-size: 14.5px; line-height: 1.3; }
+
+/* Preciosa */
+.prec { background: #050304; overflow: hidden; }
+.prec__night { position: absolute; inset: 0; background: url(img/night.webp) center / cover; opacity: .75; }
+.prec__night::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, var(--void) 0, transparent 16%, transparent 84%, var(--void) 100%); }
+.prec__grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); gap: clamp(28px, 5vw, 76px); align-items: center; }
+.frame { position: relative; padding: clamp(9px, 1.1vw, 15px); border-radius: 6px; background: var(--bezel); box-shadow: 0 60px 120px -40px #000, 0 0 90px -30px rgba(227, 181, 87, .55), inset 0 0 0 1px rgba(255, 246, 214, .7); }
+.lbox { position: relative; aspect-ratio: 1170 / 1750; overflow: hidden; background: #000; touch-action: pan-y; cursor: crosshair; box-shadow: 0 0 0 1px rgba(0, 0, 0, .7); }
+.lbox img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; user-select: none; -webkit-user-drag: none; }
+.lbox .lo { filter: brightness(.58); }
+.lbox .hi { filter: brightness(1.5) contrast(1.08); -webkit-mask-image: radial-gradient(circle var(--lr, 240px) at var(--lx, 50%) var(--ly, 40%), #000 0%, rgba(0, 0, 0, .72) 36%, transparent 100%); mask-image: radial-gradient(circle var(--lr, 240px) at var(--lx, 50%) var(--ly, 40%), #000 0%, rgba(0, 0, 0, .72) 36%, transparent 100%); }
+.lbox canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; mix-blend-mode: screen; }
+.frame__hint { position: absolute; left: 50%; bottom: 26px; translate: -50% 0; z-index: 2; padding: 7px 16px; border-radius: 999px; font-size: 14.5px; white-space: nowrap; pointer-events: none; }
+.prec__text { display: grid; gap: 24px; }
+.panel { padding: clamp(22px, 2.6vw, 34px); display: grid; gap: 14px; }
+.ticks { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.ticks li { position: relative; padding-left: 26px; }
+.ticks li::before { content: ""; position: absolute; left: 3px; top: .55em; width: 9px; height: 9px; transform: rotate(45deg); background: var(--foil); background-size: 300% 100%; box-shadow: 0 0 10px rgba(255, 233, 170, .8); }
+.prec__pair { display: grid; grid-template-columns: repeat(2, minmax(0, 170px)); gap: 20px; }
+.prec__pair .slot figcaption { font-size: 14.5px; }
+
+/* Kurz */
+.kurz__grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+.player { padding: 12px; border-radius: 28px; }
+.player__view { position: relative; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 18px; background: #000; }
+.player__view img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.62) saturate(1.05); transform: scale(1.24); transition: transform 1.6s var(--ease); }
+.player:hover .player__view img { transform: scale(1.29); }
+.play { position: absolute; left: 50%; top: 50%; width: 92px; height: 92px; margin: -46px 0 0 -46px; border-radius: 50%; background: var(--bezel); box-shadow: 0 16px 40px rgba(0, 0, 0, .7), inset 0 0 0 1px rgba(255, 246, 214, .8); display: grid; place-items: center; }
+.play::before { content: ""; width: 0; height: 0; margin-left: 7px; border-left: 25px solid var(--ink); border-block: 15px solid transparent; }
+.player__tag { position: absolute; left: 14px; top: 14px; padding: 6px 14px; border-radius: 999px; font-size: 14px; }
+.player__bar { display: flex; align-items: center; gap: 12px; padding: 12px 8px 4px; font-size: 14.5px; color: var(--mist); }
+.player__bar i { flex: 1; height: 3px; border-radius: 3px; background: linear-gradient(90deg, var(--gold) 28%, rgba(255, 255, 255, .16) 28%); }
+.steps { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; counter-reset: s; }
+.steps li { counter-increment: s; display: flex; align-items: center; gap: 14px; }
+.steps li::before { content: counter(s); flex: none; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; font-family: var(--display); font-size: 18px; color: var(--ink); background: var(--foil); background-size: 300% 100%; box-shadow: inset 0 1px 0 rgba(255, 255, 255, .7); }
+
+/* O mně */
+.about__grid { display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
+.cameo { position: relative; padding: clamp(9px, 1vw, 14px); border-radius: 999px 999px 26px 26px; background: var(--bezel); box-shadow: 0 50px 90px -30px #000, 0 0 80px -24px rgba(227, 181, 87, .5), inset 0 0 0 1px rgba(255, 246, 214, .7); }
+.cameo img { width: 100%; aspect-ratio: 727 / 1024; object-fit: cover; border-radius: 999px 999px 16px 16px; }
+.cameo::after { content: ""; position: absolute; inset: clamp(9px, 1vw, 14px); border-radius: 999px 999px 16px 16px; pointer-events: none; background: radial-gradient(44% 12% at 34% 6%, rgba(255, 255, 255, .2), transparent 74%); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .25), inset 0 3px 10px rgba(0, 0, 0, .45); }
+.maker { display: grid; grid-template-columns: clamp(110px, 12vw, 160px) minmax(0, 1fr); gap: 20px; align-items: center; }
+.maker .quote { font-size: clamp(22px, 2.1vw, 30px); }
+.medal.still { cursor: default; }
+.order__head { align-items: center; }
+.order__who { width: clamp(170px, 21vw, 290px); justify-self: end; }
+.quote { padding-block: 6px; font-family: var(--display); font-style: italic; font-size: clamp(25px, 2.6vw, 36px); line-height: 1.24; color: var(--ivory); }
+.sign { font-family: var(--script); font-size: clamp(46px, 5vw, 66px); line-height: 1.2; }
+
+/* Objednávka */
+.order { background: radial-gradient(60vw 34vw at 50% 100%, rgba(227, 181, 87, .15), transparent 66%); }
+.order__head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 22px clamp(20px, 4vw, 64px); }
+.order__intro { display: grid; gap: 22px; min-width: 0; }
+.ways { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: clamp(30px, 4vw, 52px) 0 0; padding: 0; list-style: none; counter-reset: w; }
+.way { counter-increment: w; display: flex; flex-direction: column; gap: 12px; padding: clamp(20px, 2.2vw, 30px); min-width: 0; }
+.way::before { content: counter(w); font-family: var(--display); font-style: italic; font-size: 54px; line-height: 1; color: var(--gold); }
+.way h3 { font-size: 28px; line-height: 1.1; }
+.way .val { font-size: clamp(17px, 1.5vw, 20px); font-weight: 500; overflow-wrap: anywhere; }
+.way .sub { font-size: 15px; color: var(--mist); }
+.way button { align-self: flex-start; margin-top: auto; min-height: 42px; padding: 6px 16px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255, 236, 190, .05); font-size: 15px; cursor: pointer; transition: .3s; }
+.way button:hover { border-color: var(--gold); background: rgba(227, 181, 87, .14); }
+.where { display: flex; flex-wrap: wrap; gap: 8px 32px; margin-top: 26px; color: var(--mist); }
+.where a { color: var(--gold-hi); text-underline-offset: 3px; }
+
+footer { padding-block: 32px; border-top: 1px solid var(--line); font-size: 14.5px; color: var(--mist); }
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 28px; }
+.foot__logo { width: 84px; height: 84px; }
+
+/* Galerie přes celou obrazovku */
+.lb { width: 100%; max-width: none; height: 100%; max-height: none; margin: 0; padding: 0; border: 0; background: rgba(8, 4, 6, .9); color: var(--ivory); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
+.lb::backdrop { background: transparent; }
+.lb[open] { display: grid; grid-template-rows: minmax(0, 1fr) auto; }
+.lb__view { display: grid; place-items: center; min-height: 0; padding: clamp(56px, 7vh, 72px) clamp(10px, 6vw, 90px) 8px; }
+.lb__view img { max-width: 100%; max-height: 100%; border-radius: 10px; box-shadow: 0 0 0 1px rgba(255, 240, 200, .35), 0 40px 90px -20px #000; object-fit: contain; min-height: 0; animation: rise .5s var(--ease) both; }
+.lb__view img.cut { border-radius: 0; box-shadow: none; filter: drop-shadow(0 30px 50px rgba(0, 0, 0, .6)); }
+.lb__bar { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 12px 16px calc(14px + env(safe-area-inset-bottom, 0px)); text-align: center; }
+.lb__bar span { min-width: 0; }
+.lb button { min-width: 46px; min-height: 46px; border: 0; border-radius: 50%; font-size: 20px; cursor: pointer; }
+.lb__x { position: absolute; right: calc(12px + env(safe-area-inset-right, 0px)); top: calc(12px + env(safe-area-inset-top, 0px)); z-index: 2; }
+
+.toast { position: fixed; z-index: 90; left: 50%; bottom: calc(92px + env(safe-area-inset-bottom, 0px)); translate: -50% 0; padding: 10px 20px; border-radius: 999px; opacity: 0; pointer-events: none; transition: opacity .3s; }
+.toast.on { opacity: 1; }
+
+/* Pohyb */
+@keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+@keyframes drift { from { transform: translateY(-7px); } to { transform: translateY(7px); } }
+.rise { animation: rise 1s var(--ease) both; animation-delay: calc(var(--i, 0) * .09s); }
+.rv.in { animation: rise 1s var(--ease) both; animation-delay: var(--d, 0s); }
+
+@media (max-width: 1000px) {
+  .plates { --n: 4; }
+  .door { flex-direction: column; text-align: center; border-radius: 26px; padding: 14px 12px; gap: 10px; }
+  .door div span { display: none; }
+}
+@media (max-width: 860px) {
+  .nav ul { display: none; }
+  .nav { padding-left: 18px; }
+  .dock { position: fixed; z-index: 50; left: max(12px, env(safe-area-inset-left, 0px)); right: max(12px, env(safe-area-inset-right, 0px)); bottom: calc(10px + env(safe-area-inset-bottom, 0px)); display: flex; justify-content: space-around; padding: 6px; border-radius: 999px; }
+  .dock a { flex: 1; min-height: 42px; display: grid; place-items: center; border-radius: 999px; font-size: 14px; text-decoration: none; color: var(--mist); }
+  .dock a.on { color: var(--ink); background: var(--foil); background-size: 320% 100%; }
+  footer { padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+  .hero__grid, .zaph__top, .prec__grid, .kurz__grid, .about__grid, .tip, .gift { grid-template-columns: minmax(0, 1fr); }
+  .hero__grid { min-height: 0; }
+  .stage { max-height: none; width: min(100%, 420px); }
+  .stage__still { width: 62%; }
+  .chipset { display: flex; gap: 10px; overflow-x: auto; margin-top: 14px; padding-bottom: 6px; scroll-snap-type: x proximity; }
+  .chip { position: static; flex: 0 0 min(66vw, 230px); max-width: none; animation: none; scroll-snap-align: start; }
+  .lift { position: absolute; bottom: 2px; }
+  .marsh__head { grid-template-columns: minmax(0, 1fr); }
+  .angel { width: min(78%, 300px); justify-self: center; margin-top: 4px; }
+  .ways { grid-template-columns: minmax(0, 1fr); }
+  .about__grid .cameo { width: min(84%, 380px); margin-inline: auto; }
+  .order__head { grid-template-columns: minmax(0, 1fr); }
+  .order__who { width: min(52%, 220px); justify-self: center; grid-row: 1; }
+  .frame { width: min(100%, 460px); margin-inline: auto; }
+  .tray-m { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tray-m .slot { grid-column: auto; margin-top: 0; }
+  .tray-m .s1, .tray-m .s5 { grid-column: 1 / -1; width: min(86%, 440px); margin-inline: auto; }
+  .lens::before { display: none; }
+  .lstage { cursor: default; }
+}
+@media (max-width: 520px) {
+  .doors { gap: 8px; }
+  .door { padding: 10px 6px; }
+  .door .medal { flex-basis: auto; width: 62px; }
+  .door b { font-size: 15.5px; }
+  .plates { --n: 2; }
+  .frame__hint { font-size: 13.5px; bottom: 14px; }
+  .jar__hint { font-size: 14px; }
+}
+/* Bez samovolného pohybu. Co spouští sám návštěvník (kurzor, lupa, světlo, házení), funguje dál. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; }
+}
+</style>
+
+</head>
+<body>
+<div class="ambient" aria-hidden="true"></div>
+
+<header class="nav glass">
+  <a class="brand" href="#uvod"><span class="foil">Oksi Art</span></a>
+  <nav aria-label="Hlavní menu">
+    <ul>
+      <li><a href="#zaphiry" data-spy="zaphiry">Zaphiry</a></li>
+      <li><a href="#marshmallow" data-spy="marshmallow">Marshmallow</a></li>
+      <li><a href="#preciosa" data-spy="preciosa">Obrazy z kamínků</a></li>
+      <li><a href="#kurz" data-spy="kurz">Online kurz</a></li>
+      <li><a href="#o-mne" data-spy="o-mne">O mně</a></li>
+    </ul>
+  </nav>
+  <a class="btn btn-gold" href="#objednat">Objednat</a>
+</header>
+<nav class="dock glass" aria-label="Rychlá navigace">
+  <a href="#zaphiry" data-spy="zaphiry">Zaphiry</a>
+  <a href="#marshmallow" data-spy="marshmallow">Marshmallow</a>
+  <a href="#preciosa" data-spy="preciosa">Obrazy</a>
+  <a href="#kurz" data-spy="kurz">Kurz</a>
+</nav>
+
+<main>
+  <section class="hero band" id="uvod">
+    <div class="inner hero__grid">
+      <div class="hero__text">
+        <p class="eyebrow rise" style="--i:0">Vítejte ve světě Oksi Art</p>
+        <h1 class="h-xl">
+          <span class="line rise" style="--i:1">Tahle růže</span>
+          <span class="line rise" style="--i:2"><em class="foil">se dá sníst.</em></span>
+        </h1>
+        <p class="lede rise" style="--i:3">Zefírové květiny, marshmallow postavičky a zářivé obrazy z kamínků Preciosa. Každý kousek je tvořen s pečlivostí a vášní.</p>
+        <div class="cta rise" style="--i:4">
+          <a class="btn btn-gold" href="#zaphiry">Přesvědčte se sami</a>
+          <a class="btn btn-glass glass" href="#objednat">Jak objednat</a>
+        </div>
+      </div>
+      <div class="hero__obj rise" style="--i:2">
+        <div class="stage" id="stage">
+          <img class="stage__still" src="img/cut-rose.webp" width="1094" height="1180" alt="Zefírová kytice: velká růžová růže obklopená pestrými poupaty">
+          <canvas id="rose3d" aria-hidden="true"></canvas>
+          <button class="lift glass" id="lift" type="button" aria-pressed="false">Zvednout poklop</button>
+        </div>
+        <div class="chipset">
+          <div class="chip chip--a glass"><small>Barvy</small>Přírodní, z ovoce, zeleniny nebo mořských řas</div>
+          <div class="chip chip--b glass"><small>Tvar</small>Každá květina je vytvořená ručně</div>
+          <div class="chip chip--c glass"><small>Na přání</small>Sladíme barvy i složení</div>
+        </div>
+      </div>
+    </div>
+    <div class="inner doors rise" style="--i:5">
+      <a class="door glass" href="#zaphiry">
+        <span class="medal cut" style="margin:0"><img src="img/c-yellow.webp" alt="" loading="lazy"></span>
+        <div><b>Zaphiry</b><span>Zefír ručně tvarovaný do podoby realistických květin.</span></div>
+      </a>
+      <a class="door glass" href="#marshmallow">
+        <span class="medal cut" style="margin:0"><img src="img/c-chick.webp" alt="" loading="lazy"></span>
+        <div><b>Marshmallow</b><span>Roztomilé postavičky, které potěší oči i chuťové buňky.</span></div>
+      </a>
+      <a class="door glass" href="#preciosa">
+        <span class="medal" style="margin:0"><img src="img/m-crystals.webp" alt="" loading="lazy"></span>
+        <div><b>Obrazy z kamínků</b><span>Zářivé kamínky Preciosa proměňují stěnu v klenot.</span></div>
+      </a>
+    </div>
+  </section>
+
+  <div class="statement" aria-hidden="true"><p class="foil" id="statement">Tvořeno s pečlivostí a vášní. Přesvědčte se sami.</p></div>
+
+  <section class="zaph band room" id="zaphiry">
+    <div class="inner">
+      <p class="eyebrow rv">Zaphiry</p>
+      <div class="zaph__top">
+        <div class="stack">
+          <h2 class="h-lg rv"><span class="line">Zefírové květiny.</span><span class="line"><em class="foil">Jedlé umění, které pohladí duši i jazyk.</em></span></h2>
+          <div class="copy rv">
+            <p>Zefírové květiny nejsou jen dezert. Jsou to křehké emoce zhmotněné ve sladké kráse.</p>
+            <p>Každá květina je ručně vytvořená s důrazem na autenticitu a jemnost. Používám kvalitní suroviny a přírodní barvy z ovoce, zeleniny nebo mořských řas.</p>
+          </div>
+          <div class="maker rv">
+            <span class="medal still"><img src="img/p-flower.webp" alt="Oksana si prohlíží zefírovou květinu" loading="lazy"></span>
+            <p class="quote">Aby mé květy vypadaly co nejvíce jako skutečné.</p>
+          </div>
+          <ul class="chips rv">
+            <li>Originální dárek</li>
+            <li>Jedlá dekorace</li>
+            <li>Překvapení pro učitelky, maminky, přátele i děti</li>
+            <li>Jen tak, pro radost</li>
+          </ul>
+        </div>
+        <div class="loupe-wrap rv">
+          <div class="lstage" id="lstage">
+            <img id="limg" src="img/c-roses.webp" width="1252" height="1252" alt="Kytice zefírových růží a pivoněk v růžové, broskvové a žluté barvě se zelenými lístky">
+            <div class="lens" id="lens" aria-hidden="true"><div class="lens__in" id="lensIn"></div></div>
+          </div>
+          <div class="switch" role="group" aria-label="Vyberte fotku pod lupou">
+            <button type="button" aria-pressed="true" data-src="img/c-roses.webp" data-ar="1" data-alt="Kytice zefírových růží a pivoněk v růžové, broskvové a žluté barvě se zelenými lístky"><img src="img/c-roses.webp" alt="" loading="lazy">Růže</button>
+            <button type="button" aria-pressed="false" data-src="img/c-tulips.webp" data-ar="1" data-alt="Kytice zefírových tulipánů ve žluté, fialové a krémové barvě"><img src="img/c-tulips.webp" alt="" loading="lazy">Tulipány</button>
+            <span class="note">Podívejte se zblízka. Přejeďte lupou po květech.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="vitrina-head rv">
+        <h3 class="h-md">Ze sladké vitríny</h3>
+        <p class="note">Klikněte na kousek a prohlédněte si celou fotku.</p>
+      </div>
+      <div class="tray-m">
+        <figure class="slot s1 rv" style="--dl:-1s"><button class="medal cut" type="button" data-g="z" data-full="img/c-pastel.webp" data-cap="Pastelová kytice s ranunkulusy"><img src="img/c-pastel.webp" alt="Pastelová zefírová kytice s růžovým a žlutým ranunkulusem" loading="lazy"></button><figcaption>Pastelová kytice</figcaption></figure>
+        <figure class="slot s2 rv" style="--dl:-4s"><button class="medal cut" type="button" data-g="z" data-full="img/c-winter.webp" data-cap="Zimní kompozice se šiškami a červenými bobulemi"><img src="img/c-winter.webp" alt="Zimní zefírová kompozice: bílé růže, tyrkysové květy, šišky a červené bobule" loading="lazy"></button><figcaption>Zimní kompozice</figcaption></figure>
+        <figure class="slot s3 rv" style="--dl:-2s"><button class="medal cut" type="button" data-g="z" data-full="img/c-yellow.webp" data-cap="Jedna žlutá květina"><img src="img/c-yellow.webp" alt="Žlutá zefírová květina se zeleným středem" loading="lazy"></button><figcaption>Žlutá květina</figcaption></figure>
+        <figure class="slot s4 rv" style="--dl:-6s"><button class="medal cut" type="button" data-g="z" data-full="img/c-purple.webp" data-cap="Bílé ranunkulusy a fialové hortenzie"><img src="img/c-purple.webp" alt="Zefírová kytice: bílé květy se zeleným středem a fialové hortenzie" loading="lazy"></button><figcaption>Bílá a fialová</figcaption></figure>
+        <figure class="slot s5 rv" style="--dl:-3s"><button class="medal cut" type="button" data-g="z" data-full="img/c-wreath.webp" data-cap="Bílý věnec s jemně růžovými květy"><img src="img/c-wreath.webp" alt="Věnec z bílých a jemně růžových zefírových květin" loading="lazy"></button><figcaption>Bílý věnec</figcaption></figure>
+        <figure class="slot s6 rv" style="--dl:-7s"><button class="medal cut" type="button" data-g="z" data-full="img/c-box.webp" data-cap="Krabička v tyrkysové a růžové"><img src="img/c-box.webp" alt="Krabička plná tyrkysových, růžových a bílých zefírových květin" loading="lazy"></button><figcaption>Krabička</figcaption></figure>
+      </div>
+
+      <div class="gift">
+        <img class="gift__img rv" src="img/c-gift.webp" width="1162" height="1162" alt="Kulatá dárková krabička s průhledným víčkem a růžovou stuhou, uvnitř zefírové květiny" loading="lazy">
+        <div class="stack rv">
+          <h3 class="h-md">Tematické krabičky</h3>
+          <p class="lede">Nabízím i tematické krabičky a možnost sladit barvy nebo složení podle přání.</p>
+          <a class="btn btn-gold" href="#objednat">Objednat krabičku</a>
+        </div>
+        <img class="gift__photo rv" src="img/c-pinkbox.webp" width="333" height="703" alt="Růžová krabička se zefírovými květinami, stuhou a kulatou etiketou Oksi Art" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="marsh band room" id="marshmallow">
+    <div class="inner">
+      <div class="marsh__head">
+        <div class="stack">
+          <p class="eyebrow rv">Marshmallow</p>
+          <h2 class="h-lg rv"><span class="line">Marshmallow postavičky.</span><span class="line"><em class="foil">Sladká radost, kterou si zamilujete.</em></span></h2>
+          <div class="copy rv">
+            <p>Jsou měkké, roztomilé a tak chutné, že z nich budete mít radost na pohled i na jazyku. Každá postavička je originál a vzniká ručně s důrazem na detail, jemnost a hravost.</p>
+          </div>
+        </div>
+        <img class="angel" src="img/c-uni-big.webp" width="863" height="984" alt="Marshmallow jednorožec s růžovou hřívou a květinami na černém podstavci" loading="lazy">
+      </div>
+
+      <div class="jar rv" id="jar">
+        <div class="jar__ui">
+          <span class="jar__hint">Popadněte je a hoďte s nimi.<span class="jar__name" id="jarName" aria-live="polite"></span></span>
+          <button class="jar__shake glass" id="shake" type="button">Zatřást vitrínou</button>
+        </div>
+        <div class="jar__floor" id="floor">
+          <button class="tok" type="button" data-r="84" data-name="Kuřátko" aria-label="Kuřátko"><img src="img/c-chick.webp" alt="" loading="lazy"></button>
+          <button class="tok" type="button" data-r="96" data-name="Jednorožec na duze" aria-label="Jednorožec na duze"><img src="img/c-unicorn.webp" alt="" loading="lazy"></button>
+          <button class="tok" type="button" data-r="84" data-name="Včelka" aria-label="Včelka"><img src="img/c-bee.webp" alt="" loading="lazy"></button>
+          <button class="tok" type="button" data-r="86" data-name="Králíček" aria-label="Králíček"><img src="img/c-bunny.webp" alt="" loading="lazy"></button>
+          <button class="tok" type="button" data-r="84" data-name="Medvídek" aria-label="Medvídek"><img src="img/c-bear.webp" alt="" loading="lazy"></button>
+          <button class="tok" type="button" data-r="90" data-name="Jednorožec s květinami" aria-label="Jednorožec s květinami"><img src="img/c-uni.webp" alt="" loading="lazy"></button>
+          <button class="tok" type="button" data-r="88" data-name="Pejsek" aria-label="Pejsek"><img src="img/c-dog.webp" alt="" loading="lazy"></button>
+          <button class="tok" type="button" data-r="82" data-name="Sovička" aria-label="Sovička"><img src="img/c-owl.webp" alt="" loading="lazy"></button>
+          <button class="tok" type="button" data-r="88" data-name="Žlutý pejsek" aria-label="Žlutý pejsek"><img src="img/c-ydog.webp" alt="" loading="lazy"></button>
+          <button class="tok" type="button" data-r="84" data-name="Zvířátko s kytičkou" aria-label="Zvířátko s kytičkou"><img src="img/c-flower.webp" alt="" loading="lazy"></button>
+          <button class="tok m-off" type="button" data-r="62" data-name="Kuřátko" aria-label="Kuřátko"><img src="img/c-chick.webp" alt="" loading="lazy"></button>
+          <button class="tok m-off" type="button" data-r="60" data-name="Včelka" aria-label="Včelka"><img src="img/c-bee.webp" alt="" loading="lazy"></button>
+          <button class="tok m-off" type="button" data-r="60" data-name="Sovička" aria-label="Sovička"><img src="img/c-owl.webp" alt="" loading="lazy"></button>
+          <button class="tok m-off" type="button" data-r="84" data-name="Králíček s mašlí" aria-label="Králíček s mašlí"><img src="img/c-bow.webp" alt="" loading="lazy"></button>
+          <button class="tok m-off" type="button" data-r="60" data-name="Zvířátko s kytičkou" aria-label="Zvířátko s kytičkou"><img src="img/c-flower.webp" alt="" loading="lazy"></button>
+          <button class="tok m-off" type="button" data-r="62" data-name="Pejsek" aria-label="Pejsek"><img src="img/c-dog.webp" alt="" loading="lazy"></button>
+        </div>
+      </div>
+
+      <div class="tip rv">
+        <p><b>Tip k užívání:</b> nejlépe chutnají první dny, třeba položené na teplou mléčnou pěnu nebo jemně zapečené v troubě, například na sušence s čokoládou.</p>
+        <p>Figurky jsou stabilní, ale s každým dnem přirozeně ztrácí pružnost, a přesto zůstávají jedlé. Jsou krásným dárkem i ozdobou slavnostního stolu.</p>
+      </div>
+
+      <div class="plates">
+        <figure class="slot rv" style="--dl:-1s"><button class="medal" type="button" data-g="m" data-full="img/f-plate.webp" data-cap="Zvířátka s mašličkami a srdíčky"><img src="img/m-plate.webp" alt="Podnos plný marshmallow zvířátek" loading="lazy"></button><figcaption>Zvířátka</figcaption></figure>
+        <figure class="slot rv" style="--dl:-3s"><button class="medal" type="button" data-g="m" data-full="img/f-unicorn.webp" data-cap="Jednorožci a duhy"><img src="img/m-unicorn.webp" alt="Marshmallow jednorožci a duhy na podnosu" loading="lazy"></button><figcaption>Jednorožci a duhy</figcaption></figure>
+        <figure class="slot rv" style="--dl:-5s"><button class="medal" type="button" data-g="m" data-full="img/f-dinos.webp" data-cap="Barevní dráčci s balónky"><img src="img/m-dinos.webp" alt="Barevní marshmallow dráčci na podnosu" loading="lazy"></button><figcaption>Dráčci</figcaption></figure>
+        <figure class="slot rv" style="--dl:-2s"><button class="medal" type="button" data-g="m" data-full="img/f-lions.webp" data-cap="Lvíčci"><img src="img/m-lions.webp" alt="Marshmallow lvíčci s červenou mašlí" loading="lazy"></button><figcaption>Lvíčci</figcaption></figure>
+        <figure class="slot rv" style="--dl:-6s"><button class="medal" type="button" data-g="m" data-full="img/f-angels.webp" data-cap="Andílci se svatozáří"><img src="img/m-angels.webp" alt="Marshmallow andílci se svatozáří na tmavém podkladu" loading="lazy"></button><figcaption>Andílci</figcaption></figure>
+        <figure class="slot rv" style="--dl:-7s"><button class="medal" type="button" data-g="m" data-full="img/f-bunnies.webp" data-cap="Křídlatí králíčci se srdíčky"><img src="img/m-bunnies.webp" alt="Marshmallow králíčci s křídly a modrá srdíčka na tmavém podkladu" loading="lazy"></button><figcaption>Křídlatí králíčci</figcaption></figure>
+        <figure class="slot rv" style="--dl:-4s"><button class="medal" type="button" data-g="m" data-full="img/f-easter.webp" data-cap="Velikonoční králíčci s vajíčky"><img src="img/m-easter.webp" alt="Dva marshmallow králíčci s velikonočními vajíčky" loading="lazy"></button><figcaption>Velikonoční králíčci</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="prec band room" id="preciosa">
+    <div class="prec__night" aria-hidden="true"></div>
+    <div class="inner prec__grid">
+      <div class="frame rv">
+        <div class="lbox" id="lbox">
+          <img class="lo" src="img/f-lion.webp" alt="Obraz lva s korunou z kamínků Preciosa na černém podkladu" loading="lazy">
+          <img class="hi" src="img/f-lion.webp" alt="" aria-hidden="true" loading="lazy">
+          <canvas id="glint" aria-hidden="true"></canvas>
+        </div>
+        <div class="frame__hint glass">Přejeďte světlem po kamíncích</div>
+      </div>
+      <div class="prec__text">
+        <p class="eyebrow rv">Obrazy z kamínků</p>
+        <h2 class="h-lg rv"><span class="line">Obrazy z kamínků Preciosa.</span><span class="line"><em class="foil">Krása, která září.</em></span></h2>
+        <div class="copy rv">
+          <p>Když se spojí třpyt krystalů, preciznost rukou a vášeň pro tvorbu, vzniká něco, co nelze přehlédnout.</p>
+          <p>Skládám kamínek po kamínku, trpělivě, s důrazem na barvy, strukturu i emoci, kterou má výsledek vyvolat.</p>
+        </div>
+        <div class="panel glass rv">
+          <h3 class="h-md" style="font-size:clamp(25px,2.2vw,32px)">Každý obraz</h3>
+          <ul class="ticks">
+            <li>je originál,</li>
+            <li>lze přizpůsobit barvami či motivem,</li>
+            <li>má pevný základ a profesionální zpracování,</li>
+            <li>je ideální jako luxusní dárek, osobní dekorace nebo výjimečný prvek do interiéru.</li>
+          </ul>
+        </div>
+        <div class="prec__pair rv">
+          <figure class="slot" style="--dl:-2s"><button class="medal" type="button" data-g="p" data-full="img/f-crystals.webp" data-cap="Kamínek po kamínku: detail rozpracovaného obrazu"><img src="img/m-crystals.webp" alt="Detail kamínků Preciosa na předloze" loading="lazy"></button><figcaption>Kamínek po kamínku</figcaption></figure>
+          <figure class="slot" style="--dl:-5s"><button class="medal" type="button" data-g="p" data-full="img/f-lionpair.webp" data-cap="Lvice s mládětem z kamínků Preciosa"><img src="img/f-lionpair.webp" alt="Obraz lvů z kamínků Preciosa na světlém podkladu" loading="lazy"></button><figcaption>Na světlém podkladu</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band room" id="kurz">
+    <div class="inner kurz__grid">
+      <div class="player glass rv">
+        <div class="player__view">
+          <img src="img/c-tulips.webp" alt="Zefírové tulipány, ukázka z kurzu" loading="lazy">
+          <div class="play" aria-hidden="true"></div>
+          <span class="player__tag glass">Připravujeme</span>
+        </div>
+        <div class="player__bar" aria-hidden="true"><span>Lekce 1</span><i></i></div>
+      </div>
+      <div class="stack">
+        <p class="eyebrow rv">Online kurz</p>
+        <h2 class="h-lg rv"><span class="line">Naučte se to taky.</span><span class="line"><em class="foil">Zefírové květiny krok za krokem.</em></span></h2>
+        <ol class="steps rv">
+          <li>Vyberete si kurz</li>
+          <li>Zaplatíte online</li>
+          <li>Hned se vám otevřou videa</li>
+        </ol>
+        <p class="note rv">Cenu a datum spuštění doplníme.</p>
+        <a class="btn btn-gold rv" href="#objednat">Zajímá mě kurz</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band room" id="o-mne">
+    <div class="inner about__grid">
+      <div class="cameo rv"><img src="img/p-main.webp" width="727" height="1024" alt="Oksana drží krabici se zefírovými květinami" loading="lazy"></div>
+      <div class="stack">
+        <p class="eyebrow rv">O mně</p>
+        <h2 class="h-lg rv">Jmenuji se <em class="foil">Oksana.</em></h2>
+        <div class="copy rv">
+          <p>Pocházím z Ukrajiny a v České republice žiji už více než 23 let. Tady jsem zakořenila, tvořím, sním a nacházím radost v maličkostech, které dokážou potěšit srdce druhých.</p>
+          <p>Když jsem poprvé spatřila zefírové květiny, okouzlily mě svou jemností a krásou tak silně, že jsem okamžitě věděla: tohle chci umět. Od té chvíle neustále hledám nové techniky, studuji, zkouším a tvořím, s jediným cílem, aby mé květy vypadaly co nejvíce jako skutečné.</p>
+        </div>
+        <p class="quote rv">Každý obraz je jako meditace. Trpělivost, preciznost, ticho.</p>
+        <div class="copy rv"><p>Tvorba je pro mě způsob, jak se spojit se sebou i s ostatními. Děkuji, že tu jste.</p></div>
+        <p class="sign rv"><span class="foil">Oksana</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="order band room" id="objednat">
+    <div class="inner">
+      <div class="order__head">
+        <div class="order__intro">
+          <p class="eyebrow rv">Objednávka</p>
+          <h2 class="h-lg rv"><span class="line">Máte zájem?</span><span class="line"><em class="foil">Domluvíme se.</em></span></h2>
+          <p class="lede rv">Zavolejte a sdělte své představy, nebo rovnou napište e-mail s objednávkou a uveďte, kolik kusů čeho si přejete. Objednávky vyřizujeme po platbě na účet.</p>
+        </div>
+        <span class="medal still order__who rv"><img src="img/p-hand.webp" alt="Oksana s kyticí zefírových květin" loading="lazy"></span>
+      </div>
+      <ol class="ways">
+        <li class="way glass rv"><h3>Zavolejte</h3><span class="val">+420 774 875 889</span><button type="button" data-copy="+420774875889">Zkopírovat číslo</button></li>
+        <li class="way glass rv" style="--d:.08s"><h3>Pošlete e-mail</h3><span class="val">oksi.art.handmade@gmail.com</span><button type="button" data-copy="oksi.art.handmade@gmail.com">Zkopírovat e-mail</button></li>
+        <li class="way glass rv" style="--d:.16s"><h3>Zaplaťte předem</h3><span class="val">670100-2208530966/6210</span><span class="sub">Číslo účtu</span><button type="button" data-copy="670100-2208530966/6210">Zkopírovat účet</button></li>
+      </ol>
+      <p class="where rv"><span>Mostecká 663, 460 06 Liberec VI - Rochlice</span><a href="https://www.instagram.com/_zaphiry/">Instagram @_zaphiry</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="band">
+  <div class="inner foot"><img class="foot__logo" src="img/logo-kulate.webp" width="84" height="84" alt="Logo Oksi Art" loading="lazy"><span>© 2026 Oksi Art</span><span>Ručně tvořeno v Liberci</span></div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Galerie">
+  <button class="lb__x glass" id="lbX" type="button" aria-label="Zavřít">×</button>
+  <div class="lb__view" id="lbView"><img id="lbImg" alt=""></div>
+  <div class="lb__bar">
+    <button class="glass" id="lbPrev" type="button" aria-label="Předchozí fotka">‹</button>
+    <span id="lbCap"></span>
+    <button class="glass" id="lbNext" type="button" aria-label="Další fotka">›</button>
+  </div>
+</dialog>
+<div class="toast glass" id="toast" role="status"></div>
+
+<script>
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const smooth = t => t * t * (3 - 2 * t);
+  const P = { x: innerWidth * .6, y: innerHeight * .3 };
+
+  /* Zlato a sklo reagují na kurzor i na posun stránky */
+  const shiny = $$('.foil, .btn-gold, .medal');
+  const visible = new Set();
+  const seen = new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? visible.add(e.target) : visible.delete(e.target)), { rootMargin: '100px' });
+  shiny.forEach(el => seen.observe(el));
+  function shine(now) {
+    const s = scrollY;
+    const sheen = ((P.x / innerWidth * 60 + s * .05 + (calm ? 0 : now * .0035)) % 145.45).toFixed(1) + '%';
+    visible.forEach(el => {
+      if (el.classList.contains('medal')) {
+        const r = el.getBoundingClientRect();
+        const a = Math.atan2(P.y - (r.top + r.height / 2), P.x - (r.left + r.width / 2)) * 57.3;
+        el.style.setProperty('--a', (a + s * .1).toFixed(1) + 'deg');
+      } else el.style.setProperty('--sheen', sheen);
+    });
+    requestAnimationFrame(shine);
+  }
+  requestAnimationFrame(shine);
+
+  document.addEventListener('pointermove', e => {
+    P.x = e.clientX; P.y = e.clientY;
+    const t = e.target.closest && e.target.closest('.glass, .medal');
+    if (!t) return;
+    const r = t.getBoundingClientRect();
+    const mx = e.clientX - r.left, my = e.clientY - r.top;
+    if (t.classList.contains('medal')) {
+      if (e.pointerType === 'touch') return;
+      const nx = mx / r.width - .5, ny = my / r.height - .5;
+      t.style.setProperty('--ry', (nx * 15).toFixed(2) + 'deg');
+      t.style.setProperty('--rx', (-ny * 15).toFixed(2) + 'deg');
+      t.style.setProperty('--dx', (nx * 34).toFixed(1) + '%');
+      t.style.setProperty('--dy', (ny * 26).toFixed(1) + '%');
+    } else {
+      t.style.setProperty('--mx', mx + 'px');
+      t.style.setProperty('--my', my + 'px');
+    }
+  }, { passive: true });
+  document.addEventListener('pointerout', e => {
+    const t = e.target.closest && e.target.closest('.medal');
+    if (t && !t.contains(e.relatedTarget)) ['--rx', '--ry', '--dx', '--dy'].forEach(k => t.style.removeProperty(k));
+  });
+
+  /* Vstupní animace začínají z viditelného stavu */
+  if (!calm) {
+    const rv = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); rv.unobserve(e.target); } }));
+    $$('.rv').forEach(el => { if (el.getBoundingClientRect().top > innerHeight) rv.observe(el); });
+  }
+
+  /* Velká věta jede s posunem stránky */
+  const st = $('#statement');
+  function statement() {
+    const r = st.parentElement.getBoundingClientRect();
+    const p = clamp((innerHeight - r.top) / (innerHeight + r.height), 0, 1);
+    st.style.transform = `translateX(${(-p * Math.max(0, st.scrollWidth - innerWidth * .9)).toFixed(1)}px)`;
+  }
+  if (!calm) { addEventListener('scroll', () => requestAnimationFrame(statement), { passive: true }); statement(); }
+
+  /* Označení aktuální sekce */
+  const spy = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    $$('[data-spy]').forEach(a => a.classList.toggle('on', a.dataset.spy === e.target.id));
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  $$('section[id]').forEach(s => spy.observe(s));
+
+  /* Lupa */
+  (() => {
+    const stage = $('#lstage'), img = $('#limg'), lens = $('#lens'), inner = $('#lensIn');
+    const zoom = 2.5;
+    let W = 0, H = 0, D = 0, tx = .55, ty = .45, x = .55, y = .45, over = false, t = 0, on = false;
+    function layout() {
+      W = stage.clientWidth; H = stage.clientHeight; D = inner.clientWidth;
+      inner.style.backgroundImage = `url("${img.getAttribute('src')}")`;
+      inner.style.backgroundSize = `${W * zoom}px ${H * zoom}px`;
+      place();
+    }
+    function place() {
+      const px = x * W, py = y * H, off = (lens.offsetWidth - D) / 2;
+      lens.style.transform = `translate(${(px - lens.offsetWidth / 2).toFixed(1)}px, ${(py - lens.offsetHeight / 2).toFixed(1)}px)`;
+      inner.style.backgroundPosition = `${(-(px * zoom - D / 2)).toFixed(1)}px ${(-(py * zoom - D / 2)).toFixed(1)}px`;
+      return off;
+    }
+    function tick() {
+      if (!on) return;
+      if (!over && !calm) { t += .0052; tx = .5 + .3 * Math.sin(t * 1.3); ty = .5 + .31 * Math.sin(t * .87 + 1.2); }
+      x += (tx - x) * .13; y += (ty - y) * .13;
+      place();
+      requestAnimationFrame(tick);
+    }
+    function aim(e) { const r = stage.getBoundingClientRect(); tx = clamp((e.clientX - r.left) / r.width, 0, 1); ty = clamp((e.clientY - r.top) / r.height, 0, 1); }
+    stage.addEventListener('pointerenter', e => { over = true; aim(e); });
+    stage.addEventListener('pointermove', aim);
+    stage.addEventListener('pointerdown', e => { over = true; aim(e); });
+    stage.addEventListener('pointerleave', () => { over = false; });
+    stage.addEventListener('pointercancel', () => { over = false; });
+    new ResizeObserver(layout).observe(stage);
+    new IntersectionObserver(([e]) => { const was = on; on = e.isIntersecting; if (on && !was) tick(); }).observe(stage);
+    $$('.switch button').forEach(b => b.addEventListener('click', () => {
+      $$('.switch button').forEach(o => o.setAttribute('aria-pressed', o === b));
+      img.src = b.dataset.src; img.alt = b.dataset.alt;
+      stage.style.setProperty('--ar', b.dataset.ar);
+      requestAnimationFrame(layout);
+    }));
+    layout();
+  })();
+
+  /* Galerie */
+  (() => {
+    const lb = $('#lb'), im = $('#lbImg'), cap = $('#lbCap');
+    let group = [], i = 0;
+    function show() {
+      const m = group[i];
+      im.src = m.dataset.full; im.alt = m.dataset.cap; cap.textContent = m.dataset.cap;
+      im.classList.toggle('cut', m.classList.contains('cut'));
+      im.style.animation = 'none'; void im.offsetWidth; im.style.animation = '';
+      const many = group.length > 1;
+      $('#lbPrev').hidden = !many; $('#lbNext').hidden = !many;
+    }
+    const go = d => { i = (i + d + group.length) % group.length; show(); };
+    document.addEventListener('click', e => {
+      const m = e.target.closest('[data-full]');
+      if (!m) return;
+      group = $$(`[data-full][data-g="${m.dataset.g}"]`); i = group.indexOf(m);
+      show(); lb.showModal();
+    });
+    $('#lbX').onclick = () => lb.close();
+    $('#lbPrev').onclick = () => go(-1);
+    $('#lbNext').onclick = () => go(1);
+    $('#lbView').addEventListener('click', e => { if (e.target !== im) lb.close(); });
+    lb.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') go(-1); if (e.key === 'ArrowRight') go(1); });
+  })();
+
+  /* Kopírování kontaktů */
+  (() => {
+    const toast = $('#toast');
+    let timer;
+    const say = msg => { toast.textContent = msg; toast.classList.add('on'); clearTimeout(timer); timer = setTimeout(() => toast.classList.remove('on'), 2200); };
+    $$('[data-copy]').forEach(b => b.addEventListener('click', () => {
+      const val = b.dataset.copy;
+      const fail = () => { const v = b.parentElement.querySelector('.val'); getSelection().selectAllChildren(v); say('Text je označený, zkopírujte ho ručně.'); };
+      if (!navigator.clipboard) return fail();
+      navigator.clipboard.writeText(val).then(() => say('Zkopírováno: ' + val), fail);
+    }));
+  })();
+
+  /* Marshmallow: měkké mince, které se dají házet */
+  (() => {
+    const jar = $('#jar'), floor = $('#floor'), nameEl = $('#jarName');
+    const narrow = innerWidth < 720;
+    $$('.tok', floor).forEach(el => { if (narrow && el.classList.contains('m-off')) el.remove(); });
+    const toks = $$('.tok', floor);
+    jar.classList.add('live');
+    let W = 0, H = 0, scale = 1;
+    const bodies = toks.map((el, i) => ({ el, base: +el.dataset.r, r: 50, x: 0, y: 0, vx: 0, vy: 0, q: 0, qv: 0, rot: (i * 37 % 40 - 20) * .017, vr: 0, held: false, tx: 0, ty: 0, name: el.dataset.name }));
+    function measure() {
+      W = floor.clientWidth; H = floor.clientHeight;
+      scale = clamp(Math.sqrt(W * H / (1140 * 540)) * .88, .5, .94);
+      bodies.forEach(b => {
+        b.r = b.base * scale;
+        b.el.style.setProperty('--r', b.r.toFixed(1) + 'px');
+        b.x = clamp(b.x, b.r, W - b.r); b.y = clamp(b.y, b.r, H - b.r);
+      });
+    }
+    const G = 2100, REST = .46;
+    function step(dt) {
+      for (const b of bodies) {
+        if (b.held) {
+          b.vx = (b.tx - b.x) * 22; b.vy = (b.ty - b.y) * 22;
+        } else b.vy += G * dt;
+        b.x += b.vx * dt; b.y += b.vy * dt;
+        b.vx *= .9985; b.vy *= .9995;
+        // postavičky se samy narovnají, jako hračka vstaňte panenky
+        b.vr += (-b.rot * 16 - b.vr * 3.4) * dt; b.rot += b.vr * dt;
+        // pružné zmáčknutí
+        b.qv += (-b.q * 340 - b.qv * 15) * dt; b.q += b.qv * dt;
+      }
+      for (let k = 0; k < 3; k++) {
+        for (let i = 0; i < bodies.length; i++) for (let j = i + 1; j < bodies.length; j++) {
+          const a = bodies[i], c = bodies[j];
+          const dx = c.x - a.x, dy = c.y - a.y, min = a.r + c.r, d2 = dx * dx + dy * dy;
+          if (d2 >= min * min || d2 === 0) continue;
+          const d = Math.sqrt(d2), nx = dx / d, ny = dy / d, over = (min - d) / 2;
+          const wa = a.held ? 0 : c.held ? 2 : 1, wc = c.held ? 0 : a.held ? 2 : 1;
+          a.x -= nx * over * wa; a.y -= ny * over * wa; c.x += nx * over * wc; c.y += ny * over * wc;
+          const rel = (c.vx - a.vx) * nx + (c.vy - a.vy) * ny;
+          if (rel < 0) {
+            const imp = -(1 + REST) * rel / 2;
+            if (!a.held) { a.vx -= imp * nx; a.vy -= imp * ny; }
+            if (!c.held) { c.vx += imp * nx; c.vy += imp * ny; }
+            const hit = Math.min(-rel, 900);
+            if (hit > 120) { a.qv += hit * .0028; c.qv += hit * .0028; a.vr += (ny * rel) * .0016; c.vr -= (ny * rel) * .0016; }
+          }
+        }
+        for (const b of bodies) {
+          if (b.x < b.r) { b.x = b.r; if (b.vx < 0) b.vx *= -REST; }
+          if (b.x > W - b.r) { b.x = W - b.r; if (b.vx > 0) b.vx *= -REST; }
+          if (b.y > H - b.r) {
+            b.y = H - b.r;
+            if (b.vy > 0) { if (b.vy > 160) { b.qv += Math.min(b.vy, 1100) * .0034; b.vr += b.vx * .0016; } b.vy *= b.vy > 60 ? -REST : 0; b.vx *= .94; }
+          }
+        }
+      }
+    }
+    function paint() {
+      for (const b of bodies) {
+        const q = clamp(b.q, -.2, .24);
+        b.el.style.transform = `translate(${(b.x - b.r).toFixed(1)}px, ${(b.y - b.r).toFixed(1)}px) scale(${(1 + q).toFixed(3)}, ${(1 - q).toFixed(3)}) rotate(${b.rot.toFixed(3)}rad)`;
+      }
+    }
+    // Hromádka je hotová už při načtení, aby stránka vypadala úplně i bez posouvání
+    measure();
+    bodies.forEach((b, i) => { b.x = b.r + (i * 173) % Math.max(1, W - 2 * b.r); b.y = H - b.r - (i % 5) * b.r * 2; });
+    for (let i = 0; i < 280; i++) step(1 / 60);
+    bodies.forEach(b => { b.vx = b.vy = b.q = b.qv = 0; });
+    paint();
+    let on = false, last = 0, tossed = false;
+    function toss(power) {
+      bodies.forEach(b => { if (b.held) return; b.vy = -(power * (.55 + Math.random() * .6)); b.vx += (Math.random() - .5) * power * .7; b.vr += (Math.random() - .5) * 9; b.qv += .9; });
+    }
+    function loop(now) {
+      if (!on) return;
+      const dt = Math.min((now - last) / 1000 || .016, 1 / 30); last = now;
+      step(dt / 2); step(dt / 2); paint();
+      requestAnimationFrame(loop);
+    }
+    new IntersectionObserver(([e]) => {
+      const was = on; on = e.isIntersecting;
+      if (on && !was) { last = performance.now(); requestAnimationFrame(loop); }
+      if (on && !tossed && !calm) { tossed = true; setTimeout(() => toss(1150), 260); }
+    }, { threshold: .3 }).observe(jar);
+    new ResizeObserver(() => { measure(); paint(); }).observe(floor);
+    $('#shake').addEventListener('click', () => toss(1500));
+
+    // Přejetí kurzorem do nich jemně strčí
+    let px = 0, py = 0, lastMove = 0;
+    floor.addEventListener('pointermove', e => {
+      if (e.pointerType !== 'mouse') return;
+      const r = floor.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top, t = performance.now();
+      const dtm = Math.max(8, t - lastMove), vx = (x - px) / dtm * 1000, vy = (y - py) / dtm * 1000;
+      px = x; py = y; lastMove = t;
+      for (const b of bodies) {
+        if (b.held) continue;
+        const dx = b.x - x, dy = b.y - y, d = Math.hypot(dx, dy), reach = b.r + 18;
+        if (d < reach && d > 0) {
+          b.vx += clamp(vx * .16, -320, 320) + dx / d * 40; b.vy += clamp(vy * .16, -320, 320) + dy / d * 40;
+        }
+      }
+    });
+
+    // Chycení, hození a ťuknutí
+    let nameT;
+    const showName = n => { nameEl.textContent = n; clearTimeout(nameT); nameT = setTimeout(() => { nameEl.textContent = ''; }, 1800); };
+    bodies.forEach(b => {
+      let sx = 0, sy = 0, st0 = 0, moved = false, ox = 0, oy = 0, hist = [];
+      const release = e => {
+        if (!b.held) return;
+        b.held = false; b.el.classList.remove('held');
+        const a = hist[0], z = hist[hist.length - 1];
+        if (a && z && z.t > a.t) { b.vx = clamp((z.x - a.x) / (z.t - a.t) * 1000, -1900, 1900); b.vy = clamp((z.y - a.y) / (z.t - a.t) * 1000, -1900, 1900); }
+        if (!moved && e.type === 'pointerup' && performance.now() - st0 < 350) { b.vy = -780; b.qv += 1.8; b.vr += (Math.random() - .5) * 8; }
+      };
+      b.el.addEventListener('pointerdown', e => {
+        const r = floor.getBoundingClientRect();
+        sx = e.clientX; sy = e.clientY; st0 = performance.now(); moved = false; hist = [];
+        ox = b.x - (e.clientX - r.left); oy = b.y - (e.clientY - r.top);
+        b.tx = b.x; b.ty = b.y; b.held = true; b.el.classList.add('held');
+        b.el.setPointerCapture(e.pointerId);
+        showName(b.name);
+      });
+      b.el.addEventListener('pointermove', e => {
+        if (!b.held) return;
+        const r = floor.getBoundingClientRect();
+        if (Math.hypot(e.clientX - sx, e.clientY - sy) > 6) moved = true;
+        b.tx = clamp(e.clientX - r.left + ox, b.r, W - b.r); b.ty = clamp(e.clientY - r.top + oy, b.r, H - b.r);
+        hist.push({ x: b.tx, y: b.ty, t: performance.now() }); if (hist.length > 5) hist.shift();
+      });
+      b.el.addEventListener('pointerup', release);
+      b.el.addEventListener('pointercancel', release);
+      b.el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); b.vy = -780; b.qv += 1.8; showName(b.name); } });
+    });
+  })();
+
+  /* Preciosa: světlo a záblesky přesně tam, kde jsou na fotce kamínky */
+  (() => {
+    const box = $('#lbox'), cv = $('#glint'), hi = $('.hi', box), lo = $('.lo', box);
+    const ctx = cv.getContext('2d');
+    let W = 0, H = 0, dpr = 1, pts = [], on = false, t = 0;
+    let lx = .5, ly = .38, tx = .5, ty = .38, over = false, speed = 0;
+    const tints = ['#ffffff', '#ffffff', '#ffffff', '#fff2c8', '#ffd0dd', '#bfe4ff', '#d4ffdc', '#ffb9a8'];
+    const sprites = tints.map(c => {
+      const s = document.createElement('canvas'); s.width = s.height = 96;
+      const g = s.getContext('2d'); g.translate(48, 48); g.globalCompositeOperation = 'lighter';
+      const core = g.createRadialGradient(0, 0, 0, 0, 0, 13); core.addColorStop(0, '#fff'); core.addColorStop(.28, c); core.addColorStop(1, 'rgba(0,0,0,0)');
+      g.fillStyle = core; g.fillRect(-48, -48, 96, 96);
+      for (let k = 0; k < 2; k++) {
+        g.save(); g.rotate(k * Math.PI / 2);
+        const ray = g.createLinearGradient(-48, 0, 48, 0); ray.addColorStop(0, 'rgba(0,0,0,0)'); ray.addColorStop(.5, c); ray.addColorStop(1, 'rgba(0,0,0,0)');
+        g.fillStyle = ray; g.fillRect(-48, -1, 96, 2); g.restore();
+      }
+      return s;
+    });
+    function measure() {
+      W = box.clientWidth; H = box.clientHeight; dpr = Math.min(devicePixelRatio || 1, 2);
+      cv.width = W * dpr; cv.height = H * dpr;
+      box.style.setProperty('--lr', (Math.max(W, 260) * .42).toFixed(0) + 'px');
+    }
+    function sample(img) {
+      try {
+        const w = 480, h = Math.round(w * img.naturalHeight / img.naturalWidth);
+        const c = document.createElement('canvas'); c.width = w; c.height = h;
+        const g = c.getContext('2d', { willReadFrequently: true }); g.drawImage(img, 0, 0, w, h);
+        const d = g.getImageData(0, 0, w, h).data, L = (x, y) => { const i = (y * w + x) * 4; return d[i] * .3 + d[i + 1] * .59 + d[i + 2] * .11; };
+        const all = [];
+        for (let y = 2; y < h - 2; y++) for (let x = 2; x < w - 2; x++) {
+          const v = L(x, y);
+          if (v < 70) continue;
+          if (v >= L(x - 1, y) && v >= L(x + 1, y) && v >= L(x, y - 1) && v >= L(x, y + 1)) all.push({ x: x / w, y: y / h, b: Math.min(1, v / 200) });
+        }
+        for (let i = all.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [all[i], all[j]] = [all[j], all[i]]; }
+        pts = all.slice(0, 1100).map(p => ({ ...p, ph: Math.random() * 6.28, s: .8 + Math.random() * 2.6, c: Math.random() * tints.length | 0 }));
+      } catch (e) { pts = []; }
+    }
+    function frame() {
+      if (!on) return;
+      t += calm ? .005 : .016;
+      if (!over && !calm) { tx = .5 + .34 * Math.sin(t * .42); ty = .48 + .38 * Math.sin(t * .31 + 1); }
+      const ox = lx, oy = ly;
+      lx += (tx - lx) * .09; ly += (ty - ly) * .09;
+      speed += (Math.hypot(lx - ox, ly - oy) * 60 - speed) * .1;
+      box.style.setProperty('--lx', (lx * 100).toFixed(2) + '%');
+      box.style.setProperty('--ly', (ly * 100).toFixed(2) + '%');
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, W, H);
+      ctx.globalCompositeOperation = 'lighter';
+      const R = Math.max(W, 260) * .42, boost = 1 + clamp(speed, 0, 2) * .8, unit = clamp(W / 500, .55, 1.25);
+      for (const p of pts) {
+        const px = p.x * W, py = p.y * H, d = Math.hypot(px - lx * W, py - ly * H);
+        const near = d < R ? 1 - d / R : 0;
+        const tw = Math.pow(.5 + .5 * Math.sin(t * p.s * 2.4 + p.ph), 9);
+        const a = p.b * (near * near * (.12 + tw * 1.2) * boost + tw * .1);
+        if (a < .03) continue;
+        const size = (8 + 54 * Math.min(1, a)) * unit;
+        ctx.globalAlpha = Math.min(1, a * 1.25);
+        ctx.drawImage(sprites[p.c], px - size / 2, py - size / 2, size, size);
+      }
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(frame);
+    }
+    function aim(e) { const r = box.getBoundingClientRect(); tx = clamp((e.clientX - r.left) / r.width, 0, 1); ty = clamp((e.clientY - r.top) / r.height, 0, 1); }
+    box.addEventListener('pointerenter', e => { over = true; aim(e); });
+    box.addEventListener('pointermove', aim);
+    box.addEventListener('pointerdown', e => { over = true; aim(e); });
+    box.addEventListener('pointerleave', () => { over = false; });
+    box.addEventListener('pointercancel', () => { over = false; });
+    new ResizeObserver(measure).observe(box);
+    measure();
+    const start = () => { if (lo.complete && lo.naturalWidth) sample(lo); };
+    if (lo.complete) start(); else lo.addEventListener('load', start, { once: true });
+    new IntersectionObserver(([e]) => { const was = on; on = e.isIntersecting; if (on) { lo.loading = 'eager'; hi.loading = 'eager'; if (!pts.length) start(); } if (on && !was) requestAnimationFrame(frame); }, { rootMargin: '120px' }).observe(box);
+  })();
+
+  /* 3D scéna v úvodu: zlatý podstavec, skleněný poklop a skutečná zefírová kytice */
+  function hero3d() {
+    const T = window.THREE, stage = $('#stage'), canvas = $('#rose3d'), btn = $('#lift');
+    if (!T) return;
+    let renderer;
+    try { renderer = new T.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' }); } catch (e) { return; }
+    renderer.setClearColor(0, 0);
+    renderer.outputColorSpace = T.SRGBColorSpace;
+    renderer.toneMapping = T.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.08;
+    const scene = new T.Scene();
+    const camera = new T.PerspectiveCamera(27, 1, .1, 60);
+
+    // Studio: svítící plochy, které se zrcadlí ve zlatě a ve skle
+    const env = new T.Scene();
+    env.background = new T.Color(0x070405);
+    const soft = (w, h, x, y, z, col, power) => {
+      const m = new T.Mesh(new T.PlaneGeometry(w, h), new T.MeshBasicMaterial({ color: new T.Color(col).multiplyScalar(power), side: T.DoubleSide }));
+      m.position.set(x, y, z); m.lookAt(0, 0, 0); env.add(m);
+    };
+    soft(2.2, 11, -7, 2, 3.5, '#fff5e4', 15);
+    soft(.9, 11, 6.5, 1, 3, '#ffe8c8', 11);
+    soft(9, 2.4, 0, 8.5, 1, '#ffffff', 7);
+    soft(10, 1.2, 0, -5.5, 5, '#f4dfb4', 2.6);
+    soft(2.4, 3, 3, 2, -8, '#ffb3c8', 2.4);
+    soft(2, 5, -4, 1, -8, '#ffe2ad', 3);
+    const pmrem = new T.PMREMGenerator(renderer);
+    const envMap = pmrem.fromScene(env, .012).texture;
+    const cube = new T.WebGLCubeRenderTarget(512, { type: T.HalfFloatType });
+    new T.CubeCamera(.1, 40, cube).update(renderer, env);
+    scene.environment = envMap;
+
+    const gold = new T.MeshStandardMaterial({ color: new T.Color('#ffe09a'), metalness: 1, roughness: .17, envMapIntensity: 1.35 });
+    const world = new T.Group(); scene.add(world);
+
+    // Podstavec
+    const stand = new T.Group(); world.add(stand);
+    const path = new T.Path();
+    path.moveTo(0, 0); path.lineTo(1.36, 0);
+    path.quadraticCurveTo(1.47, .01, 1.47, .08); path.quadraticCurveTo(1.47, .15, 1.36, .17);
+    path.bezierCurveTo(1.22, .19, 1.2, .28, 1.33, .31); path.quadraticCurveTo(1.39, .33, 1.37, .39);
+    path.lineTo(1.2, .41); path.lineTo(0, .41);
+    stand.add(new T.Mesh(new T.LatheGeometry(path.getPoints(18), 128), gold));
+    const velvet = new T.Mesh(new T.CircleGeometry(1.19, 96), new T.MeshStandardMaterial({ color: 0x1b0b13, roughness: .86, metalness: 0, envMapIntensity: .35 }));
+    velvet.rotation.x = -Math.PI / 2; velvet.position.y = .412; stand.add(velvet);
+    const dummy = new T.Object3D();
+    const beads = new T.InstancedMesh(new T.SphereGeometry(.024, 12, 10), gold, 110);
+    for (let i = 0; i < 110; i++) {
+      const a = i / 110 * Math.PI * 2;
+      dummy.position.set(Math.cos(a) * 1.415, .105, Math.sin(a) * 1.415); dummy.updateMatrix(); beads.setMatrixAt(i, dummy.matrix);
+    }
+    stand.add(beads);
+    const crystal = new T.MeshStandardMaterial({ color: 0xffffff, metalness: 1, roughness: .03, flatShading: true, envMapIntensity: 2.6 });
+    const gems = new T.InstancedMesh(new T.IcosahedronGeometry(.048, 0), crystal, 44);
+    for (let i = 0; i < 44; i++) {
+      const a = i / 44 * Math.PI * 2;
+      dummy.position.set(Math.cos(a) * 1.3, .4, Math.sin(a) * 1.3); dummy.rotation.set(i, i * 2.1, i * .7); dummy.updateMatrix(); gems.setMatrixAt(i, dummy.matrix);
+    }
+    stand.add(gems);
+    const stem = new T.Mesh(new T.CylinderGeometry(.02, .05, .6, 20), gold); stem.position.y = .7; world.add(stem);
+    const cup = new T.Mesh(new T.CylinderGeometry(.12, .22, .05, 40), gold); cup.position.y = .43; world.add(cup);
+
+    // Sklo: tenký poklop, proto hlavně odlesky a světlý okraj
+    const R = 1.14, top = 1.82;
+    const pr = [new T.Vector2(R + .035, .41), new T.Vector2(R + .035, .47), new T.Vector2(R, .49), new T.Vector2(R, top)];
+    for (let i = 1; i <= 26; i++) { const a = i / 26 * Math.PI / 2; pr.push(new T.Vector2(Math.max(.0001, Math.cos(a) * R), top + Math.sin(a) * R)); }
+    const glassU = { env: { value: cube.texture }, fade: { value: 1 } };
+    const glass = new T.ShaderMaterial({
+      uniforms: glassU, transparent: true, depthWrite: false, side: T.DoubleSide,
+      blending: T.CustomBlending, blendSrc: T.OneFactor, blendDst: T.OneFactor, blendSrcAlpha: T.OneFactor, blendDstAlpha: T.OneFactor,
+      vertexShader: `varying vec3 vN; varying vec3 vW;
+        void main(){ vec4 w = modelMatrix * vec4(position, 1.); vW = w.xyz; vN = normalize(mat3(modelMatrix) * normal); gl_Position = projectionMatrix * viewMatrix * w; }`,
+      fragmentShader: `uniform samplerCube env; uniform float fade; varying vec3 vN; varying vec3 vW;
+        void main(){
+          vec3 V = normalize(cameraPosition - vW); vec3 N = normalize(vN); if (!gl_FrontFacing) N = -N;
+          float c = clamp(dot(N, V), 0., 1.);
+          float F = .05 + .95 * pow(1. - c, 5.);
+          vec3 Rr = reflect(-V, N);
+          vec3 col = textureCube(env, vec3(-Rr.x, Rr.yz)).rgb * F * (gl_FrontFacing ? 1.5 : .8);
+          col += vec3(1., .93, .8) * pow(1. - c, 3.2) * .2;
+          col *= fade;
+          gl_FragColor = vec4(col, 1.);
+          #include <tonemapping_fragment>
+          #include <colorspace_fragment>
+          gl_FragColor.a = clamp(max(gl_FragColor.r, max(gl_FragColor.g, gl_FragColor.b)), 0., 1.);
+        }`
+    });
+    const dome = new T.Group(); world.add(dome);
+    dome.add(new T.Mesh(new T.LatheGeometry(pr, 96), glass));
+    const knob = new T.Mesh(new T.SphereGeometry(.105, 32, 24), gold); knob.position.y = top + R + .09; dome.add(knob);
+    const neck = new T.Mesh(new T.CylinderGeometry(.035, .075, .06, 24), gold); neck.position.y = top + R + .01; dome.add(neck);
+    glass.renderOrder = 3;
+
+    // Záře za kytkou
+    const glowC = document.createElement('canvas'); glowC.width = glowC.height = 256;
+    const gg = glowC.getContext('2d'), gr = gg.createRadialGradient(128, 128, 0, 128, 128, 128);
+    gr.addColorStop(0, 'rgba(255,214,190,.62)'); gr.addColorStop(.42, 'rgba(240,120,150,.2)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
+    gg.fillStyle = gr; gg.fillRect(0, 0, 256, 256);
+    const glowTex = new T.CanvasTexture(glowC); glowTex.colorSpace = T.SRGBColorSpace;
+    const glow = new T.Sprite(new T.SpriteMaterial({ map: glowTex, blending: T.AdditiveBlending, depthWrite: false, toneMapped: false }));
+    glow.scale.set(3.6, 3.6, 1); glow.position.set(0, 1.42, -.42); world.add(glow);
+
+    // Zlatý prach
+    const N = innerWidth < 720 ? 80 : 170;
+    const pos = new Float32Array(N * 3), seed = new Float32Array(N);
+    for (let i = 0; i < N; i++) {
+      const a = Math.random() * 6.283, r = .25 + Math.random() * 2.1;
+      pos[i * 3] = Math.cos(a) * r; pos[i * 3 + 1] = Math.random() * 3.8; pos[i * 3 + 2] = Math.sin(a) * r; seed[i] = Math.random();
+    }
+    const dustG = new T.BufferGeometry();
+    dustG.setAttribute('position', new T.BufferAttribute(pos, 3));
+    dustG.setAttribute('aSeed', new T.BufferAttribute(seed, 1));
+    const dustU = { uT: { value: 0 }, uPx: { value: 2 } };
+    const dust = new T.Points(dustG, new T.ShaderMaterial({
+      uniforms: dustU, transparent: true, depthWrite: false,
+      blending: T.CustomBlending, blendSrc: T.OneFactor, blendDst: T.OneFactor, blendSrcAlpha: T.OneFactor, blendDstAlpha: T.OneFactor,
+      vertexShader: `uniform float uT, uPx; attribute float aSeed; varying float vA;
+        void main(){ vec3 p = position; float h = mod(p.y + uT * (.05 + .06 * aSeed), 3.8); p.y = h - .1;
+          p.x += sin(uT * .4 + aSeed * 40.) * .13; p.z += cos(uT * .33 + aSeed * 30.) * .13;
+          vec4 mv = modelViewMatrix * vec4(p, 1.); gl_Position = projectionMatrix * mv;
+          float tw = .25 + .75 * pow(.5 + .5 * sin(uT * (1. + aSeed * 2.4) + aSeed * 50.), 5.);
+          vA = tw * smoothstep(0., .5, h) * smoothstep(3.8, 3.1, h);
+          gl_PointSize = uPx * (1. + aSeed * 2.4) * (8. / -mv.z); }`,
+      fragmentShader: `varying float vA; void main(){ float d = length(gl_PointCoord - .5); float a = smoothstep(.5, 0., d); a *= a; a *= vA;
+        gl_FragColor = vec4(vec3(1., .84, .5) * a * 1.5, a * .9); }`
+    }));
+    world.add(dust);
+
+    // Kytka
+    const bloom = new T.Group(); bloom.position.set(0, 1.42, .04); world.add(bloom);
+    let flower = null;
+    const size = { w: 1, h: 1 };
+    function fit() {
+      const r = canvas.getBoundingClientRect();
+      if (!r.width) return;
+      size.w = r.width; size.h = r.height;
+      renderer.setPixelRatio(Math.min(devicePixelRatio || 1, innerWidth < 720 ? 1.75 : 2));
+      renderer.setSize(r.width, r.height, false);
+      camera.aspect = r.width / r.height; camera.updateProjectionMatrix();
+      dustU.uPx.value = renderer.getPixelRatio() * (r.height / 420);
+    }
+    new ResizeObserver(fit).observe(stage); fit();
+
+    // Pohled kamery podle kurzoru
+    let yaw = 0, pitch = 0, tYaw = 0, tPitch = 0, lift = 0, want = false, burst = 0, dustT = 0, time = 0, on = true, raf = 0, last = performance.now();
+    const rect = () => stage.getBoundingClientRect();
+    addEventListener('pointermove', e => {
+      const r = rect();
+      tYaw = clamp((e.clientX - (r.left + r.width / 2)) / innerWidth, -1, 1) * .62;
+      tPitch = clamp((e.clientY - (r.top + r.height / 2)) / innerHeight, -1, 1) * .2;
+    }, { passive: true });
+
+    function setLift(v) { want = v; btn.setAttribute('aria-pressed', v); btn.textContent = v ? 'Vrátit poklop' : 'Zvednout poklop'; if (v) burst = 1; if (!raf) render(); }
+    btn.addEventListener('click', e => { e.stopPropagation(); setLift(!want); });
+    canvas.addEventListener('click', () => setLift(!want));
+
+    const quatCam = new T.Quaternion(), mat = new T.Matrix4(), up = new T.Vector3(0, 1, 0);
+    function draw(now) {
+      const dt = Math.min((now - last) / 1000, .05); last = now; time += dt;
+      const sway = calm ? 0 : Math.sin(time * .35) * .1;
+      yaw += (tYaw + sway - yaw) * .05; pitch += (tPitch - pitch) * .05;
+      // poklop se zvedá, až když střed scény mine horní část obrazovky
+      const box = rect();
+      const sp = clamp((innerHeight * .42 - (box.top + box.height / 2)) / Math.max(1, box.height * .6), 0, 1);
+      const goal = Math.max(want ? 1 : 0, sp);
+      if (goal > lift + .02 && burst < .05 && goal > .3 && lift < .3) burst = 1;
+      lift += (goal - lift) * .055;
+      const l = smooth(clamp(lift, 0, 1));
+      burst *= .975;
+      dustT += dt * (1 + burst * 10); dustU.uT.value = dustT;
+      dome.position.y = l * 3.5;
+      dome.rotation.y = l * .5;
+      glassU.fade.value = 1 - smooth(clamp((lift - .55) / .4, 0, 1));
+      knob.visible = neck.visible = glassU.fade.value > .02;
+      if (!calm) { stand.rotation.y = time * .06; }
+      // vzdálenost tak, aby se scéna vešla do plátna
+      const fitH = 4.45, fitW = 3.5, tanV = Math.tan(camera.fov * Math.PI / 360);
+      const dist = Math.max(fitH / (2 * tanV), fitW / (2 * tanV * camera.aspect)) - l * .55;
+      const cx = 0, cy = 1.62 - l * .12;
+      camera.position.set(Math.sin(yaw) * Math.cos(pitch + .05) * dist, cy + Math.sin(pitch + .05) * dist, Math.cos(yaw) * Math.cos(pitch + .05) * dist);
+      camera.lookAt(cx, cy, 0);
+      if (flower) {
+        // kytka se k divákovi z větší části natáčí, aby působila jako předmět
+        mat.lookAt(camera.position, bloom.getWorldPosition(new T.Vector3()), up);
+        quatCam.setFromRotationMatrix(mat);
+        bloom.quaternion.identity().slerp(quatCam, .78);
+        flower.rotation.z = calm ? 0 : -time * .035;
+        const s = 1 + l * .16; bloom.scale.set(s, s, s);
+        bloom.position.y = 1.42 + l * .1;
+      }
+      glow.material.opacity = .78 + l * .22;
+      renderer.render(scene, camera);
+    }
+    function render(now) {
+      raf = 0;
+      if (!on) return;
+      draw(now || performance.now());
+      raf = requestAnimationFrame(render);
+    }
+    new T.TextureLoader().load('img/cut-rose.webp', tex => {
+      tex.colorSpace = T.SRGBColorSpace;
+      tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
+      const ar = tex.image.width / tex.image.height;
+      flower = new T.Mesh(new T.PlaneGeometry(1.74 * ar, 1.74), new T.MeshBasicMaterial({ map: tex, transparent: true, alphaTest: .02, toneMapped: false }));
+      flower.renderOrder = 1;
+      bloom.add(flower);
+      stage.classList.add('live');
+      fit(); render();
+      new IntersectionObserver(([e]) => { const was = on; on = e.isIntersecting; if (on && !was && !raf) { last = performance.now(); render(); } }).observe(stage);
+    });
+  }
+  const three = document.createElement('script');
+  three.src = 'https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.min.js';
+  three.onload = hero3d;
+  document.head.appendChild(three);
+})();
+</script>
+</body>
+</html>
